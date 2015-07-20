@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */; };
+		804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */; };
+		804EB7C51B5D9B6200F5C2C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */; };
+		804EB7C71B5D9B6200F5C2C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */; };
+		804EB7CA1B5D9B6200F5C2C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */; };
+		804EB7D61B5D9B6200F5C2C9 /* JukappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		804EB7D01B5D9B6200F5C2C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 804EB7B21B5D9B6200F5C2C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 804EB7B91B5D9B6200F5C2C9;
+			remoteInfo = Jukapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		804EB7BA1B5D9B6200F5C2C9 /* Jukapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		804EB7BE1B5D9B6200F5C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		804EB7C41B5D9B6200F5C2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		804EB7C91B5D9B6200F5C2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		804EB7CF1B5D9B6200F5C2C9 /* JukappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		804EB7D41B5D9B6200F5C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukappTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		804EB7B71B5D9B6200F5C2C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		804EB7CC1B5D9B6200F5C2C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		804EB7B11B5D9B6200F5C2C9 = {
+			isa = PBXGroup;
+			children = (
+				804EB7BC1B5D9B6200F5C2C9 /* Jukapp */,
+				804EB7D21B5D9B6200F5C2C9 /* JukappTests */,
+				804EB7BB1B5D9B6200F5C2C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		804EB7BB1B5D9B6200F5C2C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				804EB7BA1B5D9B6200F5C2C9 /* Jukapp.app */,
+				804EB7CF1B5D9B6200F5C2C9 /* JukappTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		804EB7BC1B5D9B6200F5C2C9 /* Jukapp */ = {
+			isa = PBXGroup;
+			children = (
+				804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */,
+				804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */,
+				804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */,
+				804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */,
+				804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */,
+				804EB7BD1B5D9B6200F5C2C9 /* Supporting Files */,
+			);
+			path = Jukapp;
+			sourceTree = "<group>";
+		};
+		804EB7BD1B5D9B6200F5C2C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				804EB7BE1B5D9B6200F5C2C9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		804EB7D21B5D9B6200F5C2C9 /* JukappTests */ = {
+			isa = PBXGroup;
+			children = (
+				804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */,
+				804EB7D31B5D9B6200F5C2C9 /* Supporting Files */,
+			);
+			path = JukappTests;
+			sourceTree = "<group>";
+		};
+		804EB7D31B5D9B6200F5C2C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				804EB7D41B5D9B6200F5C2C9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		804EB7B91B5D9B6200F5C2C9 /* Jukapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 804EB7D91B5D9B6200F5C2C9 /* Build configuration list for PBXNativeTarget "Jukapp" */;
+			buildPhases = (
+				804EB7B61B5D9B6200F5C2C9 /* Sources */,
+				804EB7B71B5D9B6200F5C2C9 /* Frameworks */,
+				804EB7B81B5D9B6200F5C2C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jukapp;
+			productName = Jukapp;
+			productReference = 804EB7BA1B5D9B6200F5C2C9 /* Jukapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		804EB7CE1B5D9B6200F5C2C9 /* JukappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 804EB7DC1B5D9B6200F5C2C9 /* Build configuration list for PBXNativeTarget "JukappTests" */;
+			buildPhases = (
+				804EB7CB1B5D9B6200F5C2C9 /* Sources */,
+				804EB7CC1B5D9B6200F5C2C9 /* Frameworks */,
+				804EB7CD1B5D9B6200F5C2C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				804EB7D11B5D9B6200F5C2C9 /* PBXTargetDependency */,
+			);
+			name = JukappTests;
+			productName = JukappTests;
+			productReference = 804EB7CF1B5D9B6200F5C2C9 /* JukappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		804EB7B21B5D9B6200F5C2C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Berk Caputcu";
+				TargetAttributes = {
+					804EB7B91B5D9B6200F5C2C9 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					804EB7CE1B5D9B6200F5C2C9 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 804EB7B91B5D9B6200F5C2C9;
+					};
+				};
+			};
+			buildConfigurationList = 804EB7B51B5D9B6200F5C2C9 /* Build configuration list for PBXProject "Jukapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 804EB7B11B5D9B6200F5C2C9;
+			productRefGroup = 804EB7BB1B5D9B6200F5C2C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				804EB7B91B5D9B6200F5C2C9 /* Jukapp */,
+				804EB7CE1B5D9B6200F5C2C9 /* JukappTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		804EB7B81B5D9B6200F5C2C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804EB7C51B5D9B6200F5C2C9 /* Main.storyboard in Resources */,
+				804EB7CA1B5D9B6200F5C2C9 /* LaunchScreen.xib in Resources */,
+				804EB7C71B5D9B6200F5C2C9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		804EB7CD1B5D9B6200F5C2C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		804EB7B61B5D9B6200F5C2C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */,
+				804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		804EB7CB1B5D9B6200F5C2C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804EB7D61B5D9B6200F5C2C9 /* JukappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		804EB7D11B5D9B6200F5C2C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 804EB7B91B5D9B6200F5C2C9 /* Jukapp */;
+			targetProxy = 804EB7D01B5D9B6200F5C2C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				804EB7C41B5D9B6200F5C2C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				804EB7C91B5D9B6200F5C2C9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		804EB7D71B5D9B6200F5C2C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		804EB7D81B5D9B6200F5C2C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		804EB7DA1B5D9B6200F5C2C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jukapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		804EB7DB1B5D9B6200F5C2C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jukapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		804EB7DD1B5D9B6200F5C2C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JukappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jukapp.app/Jukapp";
+			};
+			name = Debug;
+		};
+		804EB7DE1B5D9B6200F5C2C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JukappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jukapp.app/Jukapp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		804EB7B51B5D9B6200F5C2C9 /* Build configuration list for PBXProject "Jukapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804EB7D71B5D9B6200F5C2C9 /* Debug */,
+				804EB7D81B5D9B6200F5C2C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		804EB7D91B5D9B6200F5C2C9 /* Build configuration list for PBXNativeTarget "Jukapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804EB7DA1B5D9B6200F5C2C9 /* Debug */,
+				804EB7DB1B5D9B6200F5C2C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		804EB7DC1B5D9B6200F5C2C9 /* Build configuration list for PBXNativeTarget "JukappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804EB7DD1B5D9B6200F5C2C9 /* Debug */,
+				804EB7DE1B5D9B6200F5C2C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 804EB7B21B5D9B6200F5C2C9 /* Project object */;
+}
