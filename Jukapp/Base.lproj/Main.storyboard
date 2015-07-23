@@ -91,9 +91,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="5v3-6s-4is"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -102,10 +99,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Rooms" id="U8W-7O-rgG"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="joinRoomSegue" id="58y-Mg-6jK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJ9-9q-hTv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="510" y="1665"/>
+            <point key="canvasLocation" x="622" y="1633"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9CEDB325-A933-4DA4-93B9-C6D99F722FAE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Jukapp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>416EE2B2D6AA882CF2AF34FF675A7A4B72A96EB5</key>
+		<string>github.com:eatbas/jukapp-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Jukapp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>416EE2B2D6AA882CF2AF34FF675A7A4B72A96EB5</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:eatbas/jukapp-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>416EE2B2D6AA882CF2AF34FF675A7A4B72A96EB5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>416EE2B2D6AA882CF2AF34FF675A7A4B72A96EB5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Jukapp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

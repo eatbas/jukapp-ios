@@ -17,12 +17,10 @@ class RoomsTableViewController: UITableViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
 
         rooms = [Room]()
-        api.loadRooms(didLoadRooms)
-    }
-    
-    func didLoadRooms(rooms: [Room]) {
-        self.rooms = rooms
-        self.tableView.reloadData()
+        api.loadRooms { (rooms: [Room]) in
+            self.rooms = rooms
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,8 +51,14 @@ class RoomsTableViewController: UITableViewController, UITableViewDelegate, UITa
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        var roomToJoin = rooms[indexPath.row]
-//        api.joinRoom(roomToJoin.id)
+        let roomToJoin = rooms[indexPath.row]
+        api.joinRoom(roomToJoin.id, completion: { (joinSuccess: Bool) in
+            if joinSuccess {
+                self.performSegueWithIdentifier("joinRoomSegue", sender: nil)
+            } else {
+                println("Room does not exist")
+            }
+        })
     }
 
     /*
@@ -91,8 +95,6 @@ class RoomsTableViewController: UITableViewController, UITableViewDelegate, UITa
         return true
     }
     */
-
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

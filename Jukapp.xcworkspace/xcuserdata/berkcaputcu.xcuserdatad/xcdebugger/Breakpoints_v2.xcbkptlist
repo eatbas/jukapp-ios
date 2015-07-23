@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Jukapp/RoomsTableViewController.swift"
-            timestampString = "459347856.425474"
+            filePath = "Jukapp/JukappAPI.swift"
+            timestampString = "459379184.744657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "prepareForSegue(_:sender:)"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "loadRooms(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
