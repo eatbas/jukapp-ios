@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5355003C11D0911E464E6E /* Pods_Jukapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF34A4341ED510EABE7A728B /* Pods_Jukapp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */; };
 		804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */; };
 		804EB7C51B5D9B6200F5C2C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */; };
 		804EB7C71B5D9B6200F5C2C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */; };
 		804EB7CA1B5D9B6200F5C2C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */; };
 		804EB7D61B5D9B6200F5C2C9 /* JukappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */; };
+		804EB7E01B5DB26300F5C2C9 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */; };
+		80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */; };
+		80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D591B5DC35200AD9A9C /* Video.swift */; };
+		80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */; };
+		80FB09491B60578200FAEC29 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB09481B60578200FAEC29 /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,14 @@
 		804EB7CF1B5D9B6200F5C2C9 /* JukappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		804EB7D41B5D9B6200F5C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukappTests.swift; sourceTree = "<group>"; };
+		804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukappAPI.swift; sourceTree = "<group>"; };
+		80789D591B5DC35200AD9A9C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
+		80FB09481B60578200FAEC29 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		8B24936F41D7F46D0BC67A13 /* Pods-Jukapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jukapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jukapp/Pods-Jukapp.release.xcconfig"; sourceTree = "<group>"; };
+		9CAE34EE98B96A93D6BD8F7A /* Pods-Jukapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jukapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jukapp/Pods-Jukapp.debug.xcconfig"; sourceTree = "<group>"; };
+		BF34A4341ED510EABE7A728B /* Pods_Jukapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jukapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5355003C11D0911E464E6E /* Pods_Jukapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +71,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04026D1F135542D6C85DBDCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF34A4341ED510EABE7A728B /* Pods_Jukapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78C76A6006911584205CB413 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE34EE98B96A93D6BD8F7A /* Pods-Jukapp.debug.xcconfig */,
+				8B24936F41D7F46D0BC67A13 /* Pods-Jukapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		804EB7B11B5D9B6200F5C2C9 = {
 			isa = PBXGroup;
 			children = (
 				804EB7BC1B5D9B6200F5C2C9 /* Jukapp */,
 				804EB7D21B5D9B6200F5C2C9 /* JukappTests */,
 				804EB7BB1B5D9B6200F5C2C9 /* Products */,
+				78C76A6006911584205CB413 /* Pods */,
+				04026D1F135542D6C85DBDCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +111,12 @@
 		804EB7BC1B5D9B6200F5C2C9 /* Jukapp */ = {
 			isa = PBXGroup;
 			children = (
+				80789D581B5DBBA400AD9A9C /* JukappAPI */,
 				804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */,
 				804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */,
 				804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */,
+				80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */,
+				804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */,
 				804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */,
 				804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */,
 				804EB7BD1B5D9B6200F5C2C9 /* Supporting Files */,
@@ -112,6 +149,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		80789D581B5DBBA400AD9A9C /* JukappAPI */ = {
+			isa = PBXGroup;
+			children = (
+				80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */,
+				80789D591B5DC35200AD9A9C /* Video.swift */,
+				80FB09481B60578200FAEC29 /* Room.swift */,
+			);
+			name = JukappAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 804EB7D91B5D9B6200F5C2C9 /* Build configuration list for PBXNativeTarget "Jukapp" */;
 			buildPhases = (
+				2B01FE061FECD9C03F6489D5 /* Check Pods Manifest.lock */,
 				804EB7B61B5D9B6200F5C2C9 /* Sources */,
 				804EB7B71B5D9B6200F5C2C9 /* Frameworks */,
 				804EB7B81B5D9B6200F5C2C9 /* Resources */,
+				DF0F79A2F328EA2C42248B93 /* Embed Pods Frameworks */,
+				A1A9DB99AFE95CD6A3468411 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +257,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B01FE061FECD9C03F6489D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1A9DB99AFE95CD6A3468411 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jukapp/Pods-Jukapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF0F79A2F328EA2C42248B93 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jukapp/Pods-Jukapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		804EB7B61B5D9B6200F5C2C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */,
+				804EB7E01B5DB26300F5C2C9 /* FavoritesTableViewController.swift in Sources */,
+				80FB09491B60578200FAEC29 /* Room.swift in Sources */,
 				804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */,
 				804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */,
+				80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */,
+				80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +443,7 @@
 		};
 		804EB7DA1B5D9B6200F5C2C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CAE34EE98B96A93D6BD8F7A /* Pods-Jukapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Jukapp/Info.plist;
@@ -350,6 +454,7 @@
 		};
 		804EB7DB1B5D9B6200F5C2C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B24936F41D7F46D0BC67A13 /* Pods-Jukapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Jukapp/Info.plist;
@@ -411,6 +516,7 @@
 				804EB7DB1B5D9B6200F5C2C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		804EB7DC1B5D9B6200F5C2C9 /* Build configuration list for PBXNativeTarget "JukappTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +525,7 @@
 				804EB7DE1B5D9B6200F5C2C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

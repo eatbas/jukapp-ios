@@ -1,0 +1,6 @@
+framework module Pods_Jukapp {
+  umbrella header "Pods-Jukapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
