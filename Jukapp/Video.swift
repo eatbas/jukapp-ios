@@ -7,23 +7,16 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Video {
     var id : Int!
     var title : String!
     var youtube_id : String!
     
-    init(data: NSDictionary) {
-        self.id = data["id"] as! Int
-        self.title = getStringFromJSON(data, key: "title")
-        self.youtube_id = getStringFromJSON(data, key: "youtube_id")
-    }
-    
-    func getStringFromJSON(data: NSDictionary, key: String) -> String {
-        if let info = data[key] as? String {
-            return info
-        }
-        
-        return ""
+    init(data: JSON) {
+        self.id = data["id"].int
+        self.title = data["title"].string
+        self.youtube_id = data["youtube_id"].string
     }
 }

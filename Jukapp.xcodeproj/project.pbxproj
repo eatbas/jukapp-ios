@@ -15,6 +15,7 @@
 		804EB7CA1B5D9B6200F5C2C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */; };
 		804EB7D61B5D9B6200F5C2C9 /* JukappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */; };
 		804EB7E01B5DB26300F5C2C9 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */; };
+		805B1A221B63F3A200DDDA0C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */; };
 		80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */; };
 		80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D591B5DC35200AD9A9C /* Video.swift */; };
 		80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */; };
@@ -43,6 +44,7 @@
 		804EB7D41B5D9B6200F5C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukappTests.swift; sourceTree = "<group>"; };
 		804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukappAPI.swift; sourceTree = "<group>"; };
 		80789D591B5DC35200AD9A9C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */,
 				804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */,
 				804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */,
+				805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */,
 				80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */,
 				804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */,
 				804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */,
@@ -317,6 +320,7 @@
 				804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */,
 				80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */,
 				80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */,
+				805B1A221B63F3A200DDDA0C /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

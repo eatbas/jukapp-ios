@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class JukappAPI {
     
@@ -51,9 +52,9 @@ class JukappAPI {
             .responseJSON { request, response, data, error in
                 var favoriteVideos = [Video]()
                 
-                if let favoriteVideosJson = data as? NSArray {
+                if let favoriteVideosJson = JSON(data!).array {
                     for favoriteVideoJson in favoriteVideosJson {
-                        let favoriteVideo = Video(data: favoriteVideoJson as! NSDictionary)
+                        let favoriteVideo = Video(data: favoriteVideoJson)
                         favoriteVideos.append(favoriteVideo)
                     }
                 }
@@ -70,5 +71,23 @@ class JukappAPI {
         ]
         
         Alamofire.request(.POST, "\(jukappUrl)/queue", parameters: parameters)
+    }
+    
+    func searchVideos(searchText: String, completion: (([Video]) -> Void)!) {
+        let parameters = [ "query": searchText ]
+        
+        Alamofire.request(.GET, "\(jukappUrl)/search", parameters: parameters)
+            .responseJSON { request, response, data, error in
+                var searchResults = [Video]()
+                
+                if let searchResultsJson = JSON(data!)["videos"].array {
+                    for searchResultJson in searchResultsJson {
+                        let searchResult = Video(data: searchResultJson)
+                        searchResults.append(searchResult)
+                    }
+                }
+                
+                completion(searchResults)
+        }
     }
 }

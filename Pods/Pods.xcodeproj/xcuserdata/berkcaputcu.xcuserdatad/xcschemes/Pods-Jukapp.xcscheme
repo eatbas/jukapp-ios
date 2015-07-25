@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52B28A033EF2415C6A92E00E"
+               BlueprintIdentifier = "EE5CB665AE2E1C46563B2D4A"
                BuildableName = "Pods_Jukapp.framework"
                BlueprintName = "Pods-Jukapp"
                ReferencedContainer = "container:Pods.xcodeproj">
