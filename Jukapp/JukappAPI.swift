@@ -12,15 +12,24 @@ import Alamofire
 class JukappAPI {
     
     let jukappUrl = "http://5d4eb299.ngrok.com"
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     func joinRoom(roomId: Int, completion: ((Bool) -> Void)!) {
+        
         Alamofire.request(.GET, "\(jukappUrl)/rooms/\(roomId)/join.json")
             .responseJSON { request, response, data, error in
-                completion(response?.statusCode == 200)
+                let successfullResponse = response?.statusCode == 200
+                
+                if successfullResponse {
+                    self.defaults.setInteger(roomId, forKey: "currentRoom")
+                }
+
+                completion(successfullResponse)
         }
     }
     
     func loadRooms(completion: (([Room]) -> Void)!) {
+        
         Alamofire.request(.GET, "\(jukappUrl)/rooms.json")
             .responseJSON { request, response, data, error in
                 var rooms = [Room]()
@@ -37,7 +46,7 @@ class JukappAPI {
     }
     
     func loadFavorites(completion: (([Video]) -> Void)!) {
-        
+
         Alamofire.request(.GET, "\(jukappUrl)/favorites.json")
             .responseJSON { request, response, data, error in
                 var favoriteVideos = [Video]()
