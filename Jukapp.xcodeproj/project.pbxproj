@@ -16,6 +16,7 @@
 		804EB7D61B5D9B6200F5C2C9 /* JukappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */; };
 		804EB7E01B5DB26300F5C2C9 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */; };
 		805B1A221B63F3A200DDDA0C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */; };
+		805C12B01B65DDBA00E0827A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 805C12AF1B65DDBA00E0827A /* SWRevealViewController.m */; };
 		80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */; };
 		80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D591B5DC35200AD9A9C /* Video.swift */; };
 		80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */; };
@@ -45,6 +46,9 @@
 		804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukappTests.swift; sourceTree = "<group>"; };
 		804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		805C12AD1B65DDB900E0827A /* Jukapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jukapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		805C12AE1B65DDBA00E0827A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		805C12AF1B65DDBA00E0827A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukappAPI.swift; sourceTree = "<group>"; };
 		80789D591B5DC35200AD9A9C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +134,10 @@
 		804EB7BD1B5D9B6200F5C2C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				805C12AE1B65DDBA00E0827A /* SWRevealViewController.h */,
+				805C12AF1B65DDBA00E0827A /* SWRevealViewController.m */,
 				804EB7BE1B5D9B6200F5C2C9 /* Info.plist */,
+				805C12AD1B65DDB900E0827A /* Jukapp-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -318,6 +325,7 @@
 				80FB09491B60578200FAEC29 /* Room.swift in Sources */,
 				804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */,
 				804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */,
+				805C12B01B65DDBA00E0827A /* SWRevealViewController.m in Sources */,
 				80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */,
 				80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */,
 				805B1A221B63F3A200DDDA0C /* SearchTableViewController.swift in Sources */,
@@ -450,9 +458,12 @@
 			baseConfigurationReference = 9CAE34EE98B96A93D6BD8F7A /* Pods-Jukapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Jukapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jukapp/Jukapp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -461,9 +472,11 @@
 			baseConfigurationReference = 8B24936F41D7F46D0BC67A13 /* Pods-Jukapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Jukapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jukapp/Jukapp-Bridging-Header.h";
 			};
 			name = Release;
 		};
