@@ -71,6 +71,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var videoToQueue = searchResults[indexPath.row]
+        api.addToQueue(videoToQueue.youtube_id, withTitle: videoToQueue.title)
+    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

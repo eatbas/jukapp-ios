@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class JukappAPI {
     
-    let jukappUrl = "http://5d4eb299.ngrok.com"
+    let jukappUrl = "http://jukapp-api.herokuapp.com"
     let defaults = NSUserDefaults.standardUserDefaults()
     
     func joinRoom(roomId: Int, completion: ((Bool) -> Void)!) {
