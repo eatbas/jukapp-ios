@@ -13,9 +13,22 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     let searchController = UISearchController(searchResultsController: nil)
     let api = JukappAPI()
     var searchResults : [Video]!
+    let defaults = NSUserDefaults.standardUserDefaults()
+    @IBOutlet weak var openBarButton: UIBarButtonItem!
+    
+    override func viewDidAppear(animated: Bool) {
+        var currentRoom = self.defaults.integerForKey("currentRoom")
+        
+        if(currentRoom == 0) {
+            self.performSegueWithIdentifier("joinRoomSegue", sender: self)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        openBarButton.target = self.revealViewController()
+        openBarButton.action = Selector("revealToggle:")
         
         searchResults = [Video]()
         

@@ -8,21 +8,29 @@
 
 import UIKit
 
-class FavoritesTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class FavoritesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var favoritesTable: UITableView!
+    @IBOutlet weak var openBarButton: UIBarButtonItem!
     var favoriteVideos : [Video]!
     let api = JukappAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.favoritesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "videoCell")
+        self.favoritesTable.dataSource = self
+        
+        openBarButton.target = revealViewController()
+        openBarButton.action = Selector("revealToggle:")
+
         favoriteVideos = [Video]()
         api.loadFavorites(didLoadVideos)
     }
     
     func didLoadVideos(videos: [Video]) {
         self.favoriteVideos = videos
-        self.tableView.reloadData()
+        self.favoritesTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,15 +40,15 @@ class FavoritesTableViewController: UITableViewController, UITableViewDelegate, 
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favoriteVideos.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("videoCell", forIndexPath: indexPath) as! UITableViewCell
         
         let video : Video
@@ -53,7 +61,7 @@ class FavoritesTableViewController: UITableViewController, UITableViewDelegate, 
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var videoToQueue = favoriteVideos[indexPath.row]
         api.addToQueue(videoToQueue.youtube_id, withTitle: videoToQueue.title)
     }
