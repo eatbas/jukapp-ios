@@ -1,59 +1,25 @@
 //
-//  SearchTableViewController.swift
+//  SlideMenuTableViewController.swift
 //  Jukapp
 //
-//  Created by Berk Caputcu on 2015-07-25.
+//  Created by Berk Caputcu on 2015-08-05.
 //  Copyright (c) 2015 Berk Caputcu. All rights reserved.
 //
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate {
+class SlideMenuTableViewController: UITableViewController {
     
-    let searchController = UISearchController(searchResultsController: nil)
-    let api = JukappAPI()
-    var searchResults : [Video]!
-    let defaults = NSUserDefaults.standardUserDefaults()
-    @IBOutlet weak var openBarButton: UIBarButtonItem!
-    
-    override func viewDidAppear(animated: Bool) {
-        var currentRoom = self.defaults.integerForKey("currentRoom")
-        
-        if(currentRoom == 0) {
-            self.performSegueWithIdentifier("joinRoomSegue", sender: self)
-        }
-    }
+    let menuItems = ["Search", "Favorites"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        openBarButton.target = self.revealViewController()
-        openBarButton.action = Selector("revealToggle:")
-        
-        searchResults = [Video]()
-        
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.sizeToFit()
-        searchController.searchBar.delegate = self
-        self.tableView.tableHeaderView = searchController.searchBar
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar)
-    {
-        api.searchVideos(searchBar.text, completion: { (searchResults: [Video]) in
-            self.searchResults = searchResults
-            self.tableView.reloadData()
-        })
-        
-        
-        searchBar.resignFirstResponder() // hide keyboard
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,29 +30,23 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return menuItems.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("searchResultVideoCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(menuItems[indexPath.row], forIndexPath: indexPath) as! UITableViewCell
         
-        let video : Video
-        
-        video = searchResults[indexPath.row]
-        
-        cell.textLabel?.text = video.title
-        cell.detailTextLabel?.text = video.youtube_id
-        
-        return cell
-    }
+        cell.textLabel?.text = menuItems[indexPath.row]
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var videoToQueue = searchResults[indexPath.row]
-        api.addToQueue(videoToQueue.youtube_id, withTitle: videoToQueue.title)
+        return cell
     }
 
     /*

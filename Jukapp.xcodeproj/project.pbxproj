@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1B5355003C11D0911E464E6E /* Pods_Jukapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF34A4341ED510EABE7A728B /* Pods_Jukapp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		802B197C1B72DFCE0050874E /* SlideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B197B1B72DFCE0050874E /* SlideMenuTableViewController.swift */; };
+		802B197E1B72FA2F0050874E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B197D1B72FA2F0050874E /* FavoritesViewController.swift */; };
+		802B19801B72FC770050874E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802B197F1B72FC770050874E /* SearchViewController.swift */; };
 		804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */; };
 		804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */; };
 		804EB7C51B5D9B6200F5C2C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */; };
 		804EB7C71B5D9B6200F5C2C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */; };
 		804EB7CA1B5D9B6200F5C2C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */; };
 		804EB7D61B5D9B6200F5C2C9 /* JukappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */; };
-		804EB7E01B5DB26300F5C2C9 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */; };
 		805B1A221B63F3A200DDDA0C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */; };
 		805C12B01B65DDBA00E0827A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 805C12AF1B65DDBA00E0827A /* SWRevealViewController.m */; };
 		80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		802B197B1B72DFCE0050874E /* SlideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewController.swift; sourceTree = "<group>"; };
+		802B197D1B72FA2F0050874E /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		802B197F1B72FC770050874E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		804EB7BA1B5D9B6200F5C2C9 /* Jukapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jukapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804EB7BE1B5D9B6200F5C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +49,6 @@
 		804EB7CF1B5D9B6200F5C2C9 /* JukappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		804EB7D41B5D9B6200F5C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		804EB7D51B5D9B6200F5C2C9 /* JukappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JukappTests.swift; sourceTree = "<group>"; };
-		804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		805C12AD1B65DDB900E0827A /* Jukapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jukapp-Bridging-Header.h"; sourceTree = "<group>"; };
 		805C12AE1B65DDBA00E0827A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -121,9 +125,11 @@
 				804EB7BF1B5D9B6200F5C2C9 /* AppDelegate.swift */,
 				804EB7C11B5D9B6200F5C2C9 /* ViewController.swift */,
 				804EB7C31B5D9B6200F5C2C9 /* Main.storyboard */,
-				805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */,
+				802B197F1B72FC770050874E /* SearchViewController.swift */,
+				802B197B1B72DFCE0050874E /* SlideMenuTableViewController.swift */,
 				80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */,
-				804EB7DF1B5DB26300F5C2C9 /* FavoritesTableViewController.swift */,
+				805B1A211B63F3A200DDDA0C /* SearchTableViewController.swift */,
+				802B197D1B72FA2F0050874E /* FavoritesViewController.swift */,
 				804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */,
 				804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */,
 				804EB7BD1B5D9B6200F5C2C9 /* Supporting Files */,
@@ -320,11 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802B197C1B72DFCE0050874E /* SlideMenuTableViewController.swift in Sources */,
+				802B19801B72FC770050874E /* SearchViewController.swift in Sources */,
 				80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */,
-				804EB7E01B5DB26300F5C2C9 /* FavoritesTableViewController.swift in Sources */,
 				80FB09491B60578200FAEC29 /* Room.swift in Sources */,
 				804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */,
 				804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */,
+				802B197E1B72FA2F0050874E /* FavoritesViewController.swift in Sources */,
 				805C12B01B65DDBA00E0827A /* SWRevealViewController.m in Sources */,
 				80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */,
 				80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */,

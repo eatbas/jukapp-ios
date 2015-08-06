@@ -15,7 +15,7 @@ class RoomsTableViewController: UITableViewController, UITableViewDelegate, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         rooms = [Room]()
         api.loadRooms { (rooms: [Room]) in
             self.rooms = rooms
@@ -54,7 +54,7 @@ class RoomsTableViewController: UITableViewController, UITableViewDelegate, UITa
         let roomToJoin = rooms[indexPath.row]
         api.joinRoom(roomToJoin.id, completion: { (joinSuccess: Bool) in
             if joinSuccess {
-                self.performSegueWithIdentifier("joinRoomSegue", sender: nil)
+                self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 println("Room does not exist")
             }
