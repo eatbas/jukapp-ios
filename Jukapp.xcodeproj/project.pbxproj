@@ -21,7 +21,6 @@
 		805C12B01B65DDBA00E0827A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 805C12AF1B65DDBA00E0827A /* SWRevealViewController.m */; };
 		80789D571B5DBB8F00AD9A9C /* JukappAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */; };
 		80789D5A1B5DC35200AD9A9C /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80789D591B5DC35200AD9A9C /* Video.swift */; };
-		80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */; };
 		80FB09491B60578200FAEC29 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB09481B60578200FAEC29 /* Room.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		805C12AF1B65DDBA00E0827A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		80789D561B5DBB8F00AD9A9C /* JukappAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukappAPI.swift; sourceTree = "<group>"; };
 		80789D591B5DC35200AD9A9C /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
 		80FB09481B60578200FAEC29 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		8B24936F41D7F46D0BC67A13 /* Pods-Jukapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jukapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jukapp/Pods-Jukapp.release.xcconfig"; sourceTree = "<group>"; };
 		9CAE34EE98B96A93D6BD8F7A /* Pods-Jukapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jukapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jukapp/Pods-Jukapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				802B19811B73059D0050874E /* RoomsViewController.swift */,
 				802B197F1B72FC770050874E /* SearchViewController.swift */,
 				802B197B1B72DFCE0050874E /* SlideMenuTableViewController.swift */,
-				80FB09461B60576000FAEC29 /* RoomsTableViewController.swift */,
 				802B197D1B72FA2F0050874E /* FavoritesViewController.swift */,
 				804EB7C61B5D9B6200F5C2C9 /* Images.xcassets */,
 				804EB7C81B5D9B6200F5C2C9 /* LaunchScreen.xib */,
@@ -328,7 +325,6 @@
 			files = (
 				802B197C1B72DFCE0050874E /* SlideMenuTableViewController.swift in Sources */,
 				802B19801B72FC770050874E /* SearchViewController.swift in Sources */,
-				80FB09471B60576000FAEC29 /* RoomsTableViewController.swift in Sources */,
 				80FB09491B60578200FAEC29 /* Room.swift in Sources */,
 				804EB7C21B5D9B6200F5C2C9 /* ViewController.swift in Sources */,
 				804EB7C01B5D9B6200F5C2C9 /* AppDelegate.swift in Sources */,
