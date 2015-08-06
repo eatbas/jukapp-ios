@@ -61,6 +61,50 @@
             </objects>
             <point key="canvasLocation" x="993" y="1749"/>
         </scene>
+        <!--Rooms-->
+        <scene sceneID="wkz-Jn-Whd">
+            <objects>
+                <viewController title="Rooms" id="2rg-vF-pXU" customClass="RoomsViewController" customModule="Jukapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Iv-1g-gN5"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Bl-pB-XvR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pLz-nC-NvG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S4G-wH-qoz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="581"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" textLabel="oaq-fH-ydF" style="IBUITableViewCellStyleDefault" id="0mQ-8O-Tmd">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0mQ-8O-Tmd" id="bOs-lZ-WLd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Room Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oaq-fH-ydF">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="roomsTable" destination="S4G-wH-qoz" id="WVq-VR-i8l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5S1-wE-X1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="2642"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="C8w-cz-iSb">
             <objects>
@@ -201,7 +245,7 @@
                     <connections>
                         <outlet property="openBarButton" destination="yif-jf-0zB" id="Slb-Sg-p9J"/>
                         <outlet property="searchResultsTable" destination="txw-yE-Qcc" id="ZWM-Ep-n6X"/>
-                        <segue destination="jhe-WS-uVJ" kind="presentation" identifier="joinRoomSegue" id="ywl-OV-Tec"/>
+                        <segue destination="2rg-vF-pXU" kind="presentation" identifier="joinRoomSegue" id="kBq-Dh-nWB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2e-Gx-czt" userLabel="First Responder" sceneMemberID="firstResponder"/>
