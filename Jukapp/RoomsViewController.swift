@@ -55,6 +55,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let roomToJoin = rooms[indexPath.row]
         api.joinRoom(roomToJoin.id, completion: { (joinSuccess: Bool) in
             if joinSuccess {
+                Router.CurrentRoomId = roomToJoin.id
                 self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 println("Room does not exist")
