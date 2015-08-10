@@ -62,7 +62,9 @@ enum Router: URLRequestConvertible {
         }
 
         if let roomId = Router.CurrentRoomId {
-            mutableURLRequest.setValue("\(roomId)", forHTTPHeaderField: "X-Room-ID")
+            if roomId > 0 {
+                mutableURLRequest.setValue("\(roomId)", forHTTPHeaderField: "X-Room-ID")
+            }
         }
         
         switch self {
