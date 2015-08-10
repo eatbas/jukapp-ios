@@ -20,8 +20,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     
     override func viewDidAppear(animated: Bool) {
         if (Router.CurrentRoomId == nil) {
-//            Router.CurrentRoomId = self.defaults.integerForKey("currentRoom")
-            Router.CurrentRoomId = 0
+            Router.CurrentRoomId = self.defaults.integerForKey("currentRoom")
+//            Router.CurrentRoomId = 0
         } else {
             self.defaults.setInteger(Router.CurrentRoomId!, forKey: "currentRoom")
         }
