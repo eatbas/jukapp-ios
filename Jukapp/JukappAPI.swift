@@ -13,25 +13,27 @@ import SwiftyJSON
 class JukappAPI {
     
     let jukappUrl = "http://jukapp-api.herokuapp.com"
-    let defaults = NSUserDefaults.standardUserDefaults()
     
     func joinRoom(roomId: Int, completion: ((Bool) -> Void)!) {
-        
-        Alamofire.request(.GET, "\(jukappUrl)/rooms/\(roomId)/join.json")
+        Alamofire.request(Router.JoinRoom(roomId))
             .responseJSON { request, response, data, error in
-                let successfullResponse = response?.statusCode == 200
-                
-                if successfullResponse {
-                    self.defaults.setInteger(roomId, forKey: "currentRoom")
-                }
-
-                completion(successfullResponse)
+                completion(response?.statusCode == 200)
         }
+    }
+    
+    func signIn(username: String, password: String, completion: ((String) -> Void)!) {
+        Alamofire.request(Router.SignIn(["user[username]": username, "user[password]": password]))
+            .responseJSON { request, response, data, error in
+                
+                if var auth_token = JSON(data!)["authentication_token"].string {
+                    completion(auth_token)
+                }
+            }
     }
     
     func loadRooms(completion: (([Room]) -> Void)!) {
         
-        Alamofire.request(.GET, "\(jukappUrl)/rooms.json")
+        Alamofire.request(Router.ListRooms)
             .responseJSON { request, response, data, error in
                 var rooms = [Room]()
             
@@ -69,14 +71,14 @@ class JukappAPI {
             "youtube_id": youtubeId,
             "title": withTitle
         ]
-        
-        Alamofire.request(.POST, "\(jukappUrl)/queue", parameters: parameters)
+
+        Alamofire.request(Router.QueueVideo(parameters))
     }
     
     func searchVideos(searchText: String, completion: (([Video]) -> Void)!) {
         let parameters = [ "query": searchText ]
-        
-        Alamofire.request(.GET, "\(jukappUrl)/search", parameters: parameters)
+
+        Alamofire.request(Router.SearchVideos(parameters))
             .responseJSON { request, response, data, error in
                 var searchResults = [Video]()
                 

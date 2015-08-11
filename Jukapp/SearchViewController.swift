@@ -19,9 +19,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     @IBOutlet weak var searchResultsTable: UITableView!
     
     override func viewDidAppear(animated: Bool) {
-        var currentRoom = self.defaults.integerForKey("currentRoom")
+        if (Router.CurrentRoomId == nil) {
+            Router.CurrentRoomId = self.defaults.integerForKey("currentRoom")
+//            Router.CurrentRoomId = 0
+        } else {
+            self.defaults.setInteger(Router.CurrentRoomId!, forKey: "currentRoom")
+        }
         
-        if(currentRoom == 0) {
+        if(Router.CurrentRoomId == 0) {
             self.performSegueWithIdentifier("joinRoomSegue", sender: self)
         }
     }
