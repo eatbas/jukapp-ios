@@ -53,9 +53,11 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Jukapp/Alamofire.framework'
+  install_framework 'Pods-Jukapp/Locksmith.framework'
   install_framework 'Pods-Jukapp/SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Jukapp/Alamofire.framework'
+  install_framework 'Pods-Jukapp/Locksmith.framework'
   install_framework 'Pods-Jukapp/SwiftyJSON.framework'
 fi

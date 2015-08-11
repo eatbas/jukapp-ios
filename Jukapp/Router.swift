@@ -10,8 +10,9 @@ import Foundation
 import Alamofire
 
 enum Router: URLRequestConvertible {
-    static let baseURLString = "http://jukapp-api.herokuapp.com" // "http://6b433d4.ngrok.com" //
-    static var OAuthToken: String?
+    static let baseURLString = "http://6b433d4.ngrok.com" // "http://jukapp-api.herokuapp.com" // 
+    static var AuthToken: String?
+    static var Username: String?
     static var CurrentRoomId: Int?
     
     case JoinRoom(Int)
@@ -57,13 +58,14 @@ enum Router: URLRequestConvertible {
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
         
-        if let token = Router.OAuthToken {
-            mutableURLRequest.setValue("\(token)", forHTTPHeaderField: "Authorization")
+        if let token = Router.AuthToken, let username = Router.Username {
+            mutableURLRequest.setValue(token, forHTTPHeaderField: "X-AuthToken")
+            mutableURLRequest.setValue(username, forHTTPHeaderField: "X-Username")
         }
 
         if let roomId = Router.CurrentRoomId {
             if roomId > 0 {
-                mutableURLRequest.setValue("\(roomId)", forHTTPHeaderField: "X-Room-ID")
+                mutableURLRequest.setValue(String(roomId), forHTTPHeaderField: "X-Room-ID")
             }
         }
         

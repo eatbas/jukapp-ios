@@ -55,17 +55,17 @@
                     <connections>
                         <outlet property="favoritesTable" destination="MWz-zL-uk6" id="h6k-xh-3Pv"/>
                         <outlet property="openBarButton" destination="nwh-Fy-abi" id="1jY-Eu-dJk"/>
-                        <segue destination="4jz-9N-QrS" kind="presentation" identifier="loginSegue" id="Oia-Zp-Zyz"/>
+                        <segue destination="4jz-9N-QrS" kind="show" identifier="loginSegue" id="Oia-Zp-Zyz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h02-Eo-IyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="1749"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="VZe-Lr-DtV">
             <objects>
-                <viewController id="4jz-9N-QrS" sceneMemberID="viewController">
+                <viewController id="4jz-9N-QrS" customClass="LoginViewController" customModule="Jukapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KLD-Oc-2nS"/>
                         <viewControllerLayoutGuide type="bottom" id="nMO-Lw-ZcM"/>
@@ -73,8 +73,32 @@
                     <view key="view" contentMode="scaleToFill" id="ubO-nG-7a5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOA-Xn-doo">
+                                <rect key="frame" x="227" y="345" width="118" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y95-ev-ZCe">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="5s0-Ij-Pje">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="cnE-md-o22"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y95-ev-ZCe" firstAttribute="width" secondItem="ubO-nG-7a5" secondAttribute="width" id="8sv-bV-ndh"/>
+                            <constraint firstItem="y95-ev-ZCe" firstAttribute="top" secondItem="KLD-Oc-2nS" secondAttribute="bottom" id="D4u-P3-7rB"/>
+                            <constraint firstItem="y95-ev-ZCe" firstAttribute="leading" secondItem="ubO-nG-7a5" secondAttribute="leading" id="ZLc-wh-SoP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="cnE-md-o22" id="tgW-wd-v9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzf-6K-vsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

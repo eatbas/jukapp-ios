@@ -5,6 +5,7 @@ use_frameworks!
 target 'Jukapp' do
   pod 'Alamofire', '~> 1.2'
   pod 'SwiftyJSON', '~> 2.2.0'
+  pod 'Locksmith'
 end
 
 target 'JukappTests' do
