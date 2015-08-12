@@ -40,10 +40,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         self.searchResultsTable.delegate = self
     }
     
-    func buttonMethod() {
-        println("Yo")
-    }
-    
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
         api.searchVideos(searchBar.text, completion: { (searchResults: [Video]) in
