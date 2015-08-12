@@ -13,22 +13,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     let searchController = UISearchController(searchResultsController: nil)
     let api = JukappAPI()
     var searchResults : [Video]!
-    let defaults = NSUserDefaults.standardUserDefaults()
+
 
     @IBOutlet weak var openBarButton: UIBarButtonItem!
     @IBOutlet weak var searchResultsTable: UITableView!
     
     override func viewDidAppear(animated: Bool) {
-        if (Router.CurrentRoomId == nil) {
-            Router.CurrentRoomId = self.defaults.integerForKey("currentRoom")
-//            Router.CurrentRoomId = 0
-        } else {
-            self.defaults.setInteger(Router.CurrentRoomId!, forKey: "currentRoom")
-        }
-        
-        if(Router.CurrentRoomId == 0) {
-            self.performSegueWithIdentifier("joinRoomSegue", sender: self)
-        }
+
     }
     
     override func viewDidLoad() {
@@ -47,6 +38,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         self.searchResultsTable.tableHeaderView = searchController.searchBar
         self.searchResultsTable.dataSource = self
         self.searchResultsTable.delegate = self
+    }
+    
+    func buttonMethod() {
+        println("Yo")
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar)

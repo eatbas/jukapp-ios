@@ -9,25 +9,53 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Locksmith
 
 class JukappAPI {
+
+    let defaults = NSUserDefaults.standardUserDefaults()
     
-    let jukappUrl = "http://jukapp-api.herokuapp.com"
+    init() {
+        if (Router.AuthToken == nil) {
+            if let user = Locksmith.loadDataForUserAccount("JukappAccount").0 {
+                Router.AuthToken = user["AuthToken"] as? String
+                Router.Username = user["Username"] as? String
+            }
+        }
+    }
     
     func joinRoom(roomId: Int, completion: ((Bool) -> Void)!) {
         Alamofire.request(Router.JoinRoom(roomId))
             .responseJSON { request, response, data, error in
-                completion(response?.statusCode == 200)
+                let joinSuccess = response?.statusCode == 200
+
+                if (joinSuccess) {
+                    Router.CurrentRoomId = roomId
+                    self.defaults.setInteger(Router.CurrentRoomId, forKey: "currentRoom")
+                }
+
+                completion(joinSuccess)
         }
     }
     
-    func signIn(username: String, password: String, completion: ((String) -> Void)!) {
-        Alamofire.request(Router.SignIn(["user[username]": username, "user[password]": password]))
+    func leaveRoom() {
+        Router.CurrentRoomId = 0
+        defaults.removeObjectForKey("currentRoom")
+    }
+    
+    func signIn(username: String, password: String, completion: ((Bool) -> Void)!) {
+        Alamofire.request(Router.SignIn(["user": ["username": username, "password": password]]))
             .responseJSON { request, response, data, error in
+                let loginSuccess = response?.statusCode == 201
                 
-                if var auth_token = JSON(data!)["authentication_token"].string {
-                    completion(auth_token)
+                if loginSuccess  {
+                    Router.AuthToken = JSON(data!)["authentication_token"].string
+                    Router.Username = username
+
+                    Locksmith.saveData(["AuthToken": Router.AuthToken!, "Username": Router.Username!], forUserAccount: "JukappAccount")
                 }
+                
+                completion(loginSuccess)
             }
     }
     
@@ -50,7 +78,7 @@ class JukappAPI {
     
     func loadFavorites(completion: (([Video]) -> Void)!) {
 
-        Alamofire.request(.GET, "\(jukappUrl)/favorites.json")
+        Alamofire.request(Router.ListFavorites)
             .responseJSON { request, response, data, error in
                 var favoriteVideos = [Video]()
                 
@@ -81,7 +109,7 @@ class JukappAPI {
         Alamofire.request(Router.SearchVideos(parameters))
             .responseJSON { request, response, data, error in
                 var searchResults = [Video]()
-                
+
                 if let searchResultsJson = JSON(data!)["videos"].array {
                     for searchResultJson in searchResultsJson {
                         let searchResult = Video(data: searchResultJson)

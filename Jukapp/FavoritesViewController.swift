@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Locksmith
 
 class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,20 +15,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var favoriteVideos : [Video]!
     let api = JukappAPI()
-    let defaults = NSUserDefaults.standardUserDefaults()
-    
-    override func viewDidAppear(animated: Bool) {
-        let (dictionary, error) = Locksmith.loadDataForUserAccount("jukappAccount")
-        if (dictionary == nil) {
-            self.performSegueWithIdentifier("loginSegue", sender: self)
-        }
-
-        // Locksmith.saveData(["authToken": "token", "username": "username"], forUserAccount: "jukappAccount")
-        
-//        if(Router.CurrentRoomId == 0) {
-//            self.performSegueWithIdentifier("joinRoomSegue", sender: self)
-//        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
