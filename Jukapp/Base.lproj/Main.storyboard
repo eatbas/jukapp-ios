@@ -127,7 +127,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S4G-wH-qoz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S4G-wH-qoz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -150,6 +150,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S4G-wH-qoz" firstAttribute="top" secondItem="pLz-nC-NvG" secondAttribute="top" id="Btu-K2-tDm"/>
+                            <constraint firstAttribute="trailing" secondItem="S4G-wH-qoz" secondAttribute="trailing" id="Hdn-ZH-d4M"/>
+                            <constraint firstAttribute="bottom" secondItem="S4G-wH-qoz" secondAttribute="bottom" id="LOY-QT-iAy"/>
+                            <constraint firstItem="S4G-wH-qoz" firstAttribute="leading" secondItem="pLz-nC-NvG" secondAttribute="leading" id="zC7-T3-PYI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rooms" id="XPa-oZ-pss"/>
                     <connections>
